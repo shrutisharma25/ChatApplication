@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/sockjs-client/1.5.1/sockjs.min.js"></script>
+	<script src="/webjars/stomp-websocket/2.3.4/stomp.min.js"></script>
+
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <div id="name-form" class="bg-primary d-flex align-items-center">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 offset-md-4">
+					<div class="input-group">
+						<input type="text" placeholder="Enter your name" id="name-value" autofocus class="form-control">
+						<div class="input-ground-append">
+							<button class="btn btn-dark" id="login">Enter</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="chat-room" class="d-none">
+		<div class="col-md-6 offset-md-3">
+			<div class="card" >
+				<div class="card-body">
+					<div class="input-group">
+						<input type="text" placeholder="Enter your Message" id="message-value" autofocus class="form-control">
+						<div class="input-ground-append">
+							<button class="btn btn-dark" id="send">Send</button>
+							<button class="btn btn-dark" id="logout">Logout</button>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table id="message-container-table">
+						</table>
+					</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
